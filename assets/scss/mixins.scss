@@ -1,0 +1,23 @@
+@mixin fontface($family, $localname, $filename, $weight, $style) {
+    @font-face {
+        font-family: $family;
+        src: local('#{$localname}'),
+            url('/fonts/#{$filename}.woff2') format('woff2'),
+            url('/fonts/#{$filename}.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+}
+@mixin mq($min, $max: false) {
+    @if $max {
+        @media (min-width: $min + px) and (max-width: $max + px) {
+            @content;
+        }
+    }
+    @else {
+        @media (max-width: $min + px) {
+            @content;
+        }
+    }
+}

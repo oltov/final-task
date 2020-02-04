@@ -1,0 +1,5 @@
+@import 'mixins.scss';
+@include fontface(Helvetica, HelveticaRegular, HelveticaRegular, 400, normal);
+@include fontface(Helvetica, Helvetica-Light, Helvetica-Light, 300, normal);
+@include fontface(Helvetica, Helvetica-Bold, Helvetica-Bold, 700, normal);
+@include fontface(YesevaOne, YesevaOne-Regular, YesevaOne-Regular, 400, normal);

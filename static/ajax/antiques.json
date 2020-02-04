@@ -1,0 +1,596 @@
+[
+    {
+        "img": "img/antiques/img1.jpg",
+        "name": "Купец с купчихой",
+        "work": "poster",
+        "plot": "genre-scene",
+        "style": "realism",
+        "technics": "oil",
+        "year": "1911"
+    },
+    {
+        "img": "img/antiques/img2.jpg",
+        "name": "Осень",
+        "work": "painting",
+        "plot": "literary-scene",
+        "style": "realism",
+        "technics": "coal",
+        "year": "1902"
+    },
+    {
+        "img": "img/antiques/img3.jpg",
+        "name": "Портрет Степана Лукича Никольского",
+        "work": "engraving",
+        "plot": "nude",
+        "style": "modern",
+        "technics": "color-pencil",
+        "year": "1924"
+    },
+    {
+        "img": "img/antiques/img4.jpg",
+        "name": "Осень",
+        "work": "graphics",
+        "plot": "interior",
+        "style": "realism",
+        "technics": "ink",
+        "year": "1902"
+    },
+    {
+        "img": "img/antiques/img5.jpg",
+        "name": "На террасе",
+        "work": "theatrical",
+        "plot": "allegorical-scene",
+        "style": "impressionism",
+        "technics": "pen",
+        "year": "1905"
+    },
+    {
+        "img": "img/antiques/img6.jpg",
+        "name": "Пасхальный обряд (Христосование)",
+        "work": "poster",
+        "plot": "literary-scene",
+        "style": "art-nouveau",
+        "technics": "pastel",
+        "year": "1911"
+    },
+    {
+        "img": "img/antiques/img7.jpg",
+        "name": "Портрет Степана Лукича Никольского",
+        "work": "theatrical",
+        "plot": "nude",
+        "style": "surrealism",
+        "technics": "watercolor",
+        "year": "1911"
+    },
+    {
+        "img": "img/antiques/img8.jpg",
+        "name": "На террасе",
+        "work": "theatrical",
+        "plot": "genre-scene",
+        "style": "primitivism",
+        "technics": "pastel",
+        "year": "1895"
+    },
+    {
+        "img": "img/antiques/img9.jpg",
+        "name": "Портрет Степана Лукича Никольского",
+        "work": "illustrations",
+        "plot": "nude",
+        "style": "modern",
+        "technics": "pastel",
+        "year": "1918"
+    },
+    {
+        "img": "img/antiques/img10.jpg",
+        "name": "Портрет артистки Т. В. Чижовой",
+        "work": "decorative",
+        "plot": "nude",
+        "style": "primitivism",
+        "technics": "pastel",
+        "year": "1895"
+    },
+    {
+        "img": "img/antiques/img11.jpg",
+        "name": "Сундучник. Из серии \"Русские типы\"",
+        "work": "illustrations",
+        "plot": "literary-scene",
+        "style": "impressionism",
+        "technics": "graphite",
+        "year": "1906"
+    },
+    {
+        "img": "img/antiques/img12.jpg",
+        "name": "Булочник. Из серии \"Русские типы\"",
+        "work": "sculpture",
+        "plot": "still-life",
+        "style": "surrealism",
+        "technics": "pen",
+        "year": "1902"
+    },
+    {
+        "img": "img/antiques/img13.jpg",
+        "name": "Булочник. Из серии \"Русские типы\"",
+        "work": "sculpture",
+        "plot": "nude",
+        "style": "primitivism",
+        "technics": "chalk",
+        "year": "1924"
+    },
+    {
+        "img": "img/antiques/img14.jpg",
+        "name": "На террасе",
+        "work": "graphics",
+        "plot": "painting",
+        "style": "primitivism",
+        "technics": "color-pencil",
+        "year": "1915"
+    },
+    {
+        "img": "img/antiques/img15.jpg",
+        "name": "Купец с купчихой",
+        "work": "decorative",
+        "plot": "genre-scene",
+        "style": "modern",
+        "technics": "color-pencil",
+        "year": "1924"
+    },
+    {
+        "img": "img/antiques/img16.jpg",
+        "name": "Трактирщик. Из серии \"Русские типы\"",
+        "work": "poster",
+        "plot": "still-life",
+        "style": "surrealism",
+        "technics": "pen",
+        "year": "1930"
+    },
+    {
+        "img": "img/antiques/img17.jpg",
+        "name": "Купец с купчихой",
+        "work": "graphics",
+        "plot": "genre-scene",
+        "style": "primitivism",
+        "technics": "pen",
+        "year": "1902"
+    },
+    {
+        "img": "img/antiques/img18.jpg",
+        "name": "Пасхальный обряд (Христосование)",
+        "work": "illustrations",
+        "plot": "painting",
+        "style": "modern",
+        "technics": "coal",
+        "year": "1906"
+    },
+    {
+        "img": "img/antiques/img19.jpg",
+        "name": "Купец с купчихой",
+        "work": "painting",
+        "plot": "architecture",
+        "style": "modern",
+        "technics": "ink",
+        "year": "1899"
+    },
+    {
+        "img": "img/antiques/img20.jpg",
+        "name": "Булочник. Из серии \"Русские типы\"",
+        "work": "decorative",
+        "plot": "historical-scene",
+        "style": "impressionism",
+        "technics": "lead pencil",
+        "year": "1902"
+    },
+    {
+        "img": "img/antiques/img21.jpg",
+        "name": "Портрет Степана Лукича Никольского",
+        "work": "engraving",
+        "plot": "allegorical-scene",
+        "style": "socialist-realism",
+        "technics": "pastel",
+        "year": "1908"
+    },
+    {
+        "img": "img/antiques/img22.jpg",
+        "name": "Осень",
+        "work": "decorative",
+        "plot": "historical-scene",
+        "style": "socialist-realism",
+        "technics": "oil",
+        "year": "1924"
+    },
+    {
+        "img": "img/antiques/img23.jpg",
+        "name": "Портрет артистки Т. В. Чижовой",
+        "work": "theatrical",
+        "plot": "interior",
+        "style": "socialist-realism",
+        "technics": "graphite",
+        "year": "1911"
+    },
+    {
+        "img": "img/antiques/img24.jpg",
+        "name": "Булочник. Из серии \"Русские типы\"",
+        "work": "poster",
+        "plot": "nude",
+        "style": "impressionism",
+        "technics": "pen",
+        "year": "1930"
+    },
+    {
+        "img": "img/antiques/img25.jpg",
+        "name": "Пасхальный обряд (Христосование)",
+        "work": "sculpture",
+        "plot": "literary-scene",
+        "style": "modern",
+        "technics": "lead pencil",
+        "year": "1924"
+    },
+    {
+        "img": "img/antiques/img26.jpg",
+        "name": "Портрет артистки Т. В. Чижовой",
+        "work": "illustrations",
+        "plot": "scenery",
+        "style": "socialist-realism",
+        "technics": "chalk",
+        "year": "1905"
+    },
+    {
+        "img": "img/antiques/img27.jpg",
+        "name": "Трактирщик. Из серии \"Русские типы\"",
+        "work": "illustrations",
+        "plot": "scenery",
+        "style": "modern",
+        "technics": "lead pencil",
+        "year": "1915"
+    },
+    {
+        "img": "img/antiques/img28.jpg",
+        "name": "Купец с купчихой",
+        "work": "sculpture",
+        "plot": "still-life",
+        "style": "art-nouveau",
+        "technics": "oil",
+        "year": "1918"
+    },
+    {
+        "img": "img/antiques/img29.jpg",
+        "name": "Портрет Степана Лукича Никольского",
+        "work": "painting",
+        "plot": "animalism",
+        "style": "art-nouveau",
+        "technics": "pen",
+        "year": "1895"
+    },
+    {
+        "img": "img/antiques/img30.jpg",
+        "name": "Портрет артистки Т. В. Чижовой",
+        "work": "sculpture",
+        "plot": "painting",
+        "style": "realism",
+        "technics": "pastel",
+        "year": "1899"
+    },
+    {
+        "img": "img/antiques/img31.jpg",
+        "name": "Сундучник. Из серии \"Русские типы\"",
+        "work": "painting",
+        "plot": "architecture",
+        "style": "surrealism",
+        "technics": "color-pencil",
+        "year": "1902"
+    },
+    {
+        "img": "img/antiques/img32.jpg",
+        "name": "Пасхальный обряд (Христосование)",
+        "work": "painting",
+        "plot": "animalism",
+        "style": "realism",
+        "technics": "chalk",
+        "year": "1930"
+    },
+    {
+        "img": "img/antiques/img33.jpg",
+        "name": "Пасхальный обряд (Христосование)",
+        "work": "illustrations",
+        "plot": "religious-scene",
+        "style": "art-nouveau",
+        "technics": "chalk",
+        "year": "1897"
+    },
+    {
+        "img": "img/antiques/img34.jpg",
+        "name": "Булочник. Из серии \"Русские типы\"",
+        "work": "graphics",
+        "plot": "city-landscape",
+        "style": "art-nouveau",
+        "technics": "engraving",
+        "year": "1908"
+    },
+    {
+        "img": "img/antiques/img35.jpg",
+        "name": "Осень",
+        "work": "theatrical",
+        "plot": "historical-scene",
+        "style": "modern",
+        "technics": "graphite",
+        "year": "1906"
+    },
+    {
+        "img": "img/antiques/img36.jpg",
+        "name": "Портрет А. Н. Протасовой",
+        "work": "theatrical",
+        "plot": "religious-scene",
+        "style": "realism",
+        "technics": "coal",
+        "year": "1915"
+    },
+    {
+        "img": "img/antiques/img37.jpg",
+        "name": "Купец с купчихой",
+        "work": "graphics",
+        "plot": "city-landscape",
+        "style": "socialist-realism",
+        "technics": "pastel",
+        "year": "1899"
+    },
+    {
+        "img": "img/antiques/img38.jpg",
+        "name": "Сундучник. Из серии \"Русские типы\"",
+        "work": "decorative",
+        "plot": "animalism",
+        "style": "surrealism",
+        "technics": "chalk",
+        "year": "1924"
+    },
+    {
+        "img": "img/antiques/img39.jpg",
+        "name": "Трактирщик. Из серии \"Русские типы\"",
+        "work": "painting",
+        "plot": "interior",
+        "style": "art-nouveau",
+        "technics": "color-pencil",
+        "year": "1911"
+    },
+    {
+        "img": "img/antiques/img40.jpg",
+        "name": "Трактирщик. Из серии \"Русские типы\"",
+        "work": "illustrations",
+        "plot": "still-life",
+        "style": "realism",
+        "technics": "coal",
+        "year": "1908"
+    },
+    {
+        "img": "img/antiques/img41.jpg",
+        "name": "Портрет артистки Т. В. Чижовой",
+        "work": "sculpture",
+        "plot": "painting",
+        "style": "art-nouveau",
+        "technics": "gouache",
+        "year": "1902"
+    },
+    {
+        "img": "img/antiques/img42.jpg",
+        "name": "Монахиня",
+        "work": "poster",
+        "plot": "allegorical-scene",
+        "style": "socialist-realism",
+        "technics": "coal",
+        "year": "1911"
+    },
+    {
+        "img": "img/antiques/img43.jpg",
+        "name": "Сундучник. Из серии \"Русские типы\"",
+        "work": "poster",
+        "plot": "genre-scene",
+        "style": "modern",
+        "technics": "lead pencil",
+        "year": "1906"
+    },
+    {
+        "img": "img/antiques/img44.jpg",
+        "name": "Портрет артистки Т. В. Чижовой",
+        "work": "sculpture",
+        "plot": "nude",
+        "style": "realism",
+        "technics": "oil",
+        "year": "1895"
+    },
+    {
+        "img": "img/antiques/img45.jpg",
+        "name": "Портрет Степана Лукича Никольского",
+        "work": "poster",
+        "plot": "nude",
+        "style": "surrealism",
+        "technics": "coal",
+        "year": "1915"
+    },
+    {
+        "img": "img/antiques/img46.jpg",
+        "name": "Портрет артистки Т. В. Чижовой",
+        "work": "engraving",
+        "plot": "historical-scene",
+        "style": "impressionism",
+        "technics": "gouache",
+        "year": "1918"
+    },
+    {
+        "img": "img/antiques/img47.jpg",
+        "name": "Купец с купчихой",
+        "work": "poster",
+        "plot": "architecture",
+        "style": "realism",
+        "technics": "watercolor",
+        "year": "1924"
+    },
+    {
+        "img": "img/antiques/img48.jpg",
+        "name": "Портрет артистки Т. В. Чижовой",
+        "work": "illustrations",
+        "plot": "allegorical-scene",
+        "style": "modern",
+        "technics": "watercolor",
+        "year": "1915"
+    },
+    {
+        "img": "img/antiques/img49.jpg",
+        "name": "Сундучник. Из серии \"Русские типы\"",
+        "work": "decorative",
+        "plot": "city-landscape",
+        "style": "socialist-realism",
+        "technics": "gouache",
+        "year": "1895"
+    },
+    {
+        "img": "img/antiques/img50.jpg",
+        "name": "На террасе",
+        "work": "decorative",
+        "plot": "still-life",
+        "style": "primitivism",
+        "technics": "graphite",
+        "year": "1905"
+    },
+    {
+        "img": "img/antiques/img51.jpg",
+        "name": "Пасхальный обряд (Христосование)",
+        "work": "graphics",
+        "plot": "scenery",
+        "style": "realism",
+        "technics": "watercolor",
+        "year": "1911"
+    },
+    {
+        "img": "img/antiques/img52.jpg",
+        "name": "Портрет артистки Т. В. Чижовой",
+        "work": "illustrations",
+        "plot": "scenery",
+        "style": "modern",
+        "technics": "chalk",
+        "year": "1897"
+    },
+    {
+        "img": "img/antiques/img53.jpg",
+        "name": "Монахиня",
+        "work": "illustrations",
+        "plot": "genre-scene",
+        "style": "realism",
+        "technics": "engraving",
+        "year": "1902"
+    },
+    {
+        "img": "img/antiques/img54.jpg",
+        "name": "Купец с купчихой",
+        "work": "illustrations",
+        "plot": "literary-scene",
+        "style": "surrealism",
+        "technics": "chalk",
+        "year": "1924"
+    },
+    {
+        "img": "img/antiques/img55.jpg",
+        "name": "Портрет артистки Т. В. Чижовой",
+        "work": "engraving",
+        "plot": "allegorical-scene",
+        "style": "art-nouveau",
+        "technics": "chalk",
+        "year": "1921"
+    },
+    {
+        "img": "img/antiques/img56.jpg",
+        "name": "Портрет Степана Лукича Никольского",
+        "work": "sculpture",
+        "plot": "nude",
+        "style": "socialist-realism",
+        "technics": "pen",
+        "year": "1924"
+    },
+    {
+        "img": "img/antiques/img57.jpg",
+        "name": "Пасхальный обряд (Христосование)",
+        "work": "theatrical",
+        "plot": "scenery",
+        "style": "modern",
+        "technics": "engraving",
+        "year": "1908"
+    },
+    {
+        "img": "img/antiques/img58.jpg",
+        "name": "Портрет А. Н. Протасовой",
+        "work": "theatrical",
+        "plot": "interior",
+        "style": "impressionism",
+        "technics": "pastel",
+        "year": "1915"
+    },
+    {
+        "img": "img/antiques/img59.jpg",
+        "name": "Осень",
+        "work": "poster",
+        "plot": "religious-scene",
+        "style": "realism",
+        "technics": "watercolor",
+        "year": "1924"
+    },
+    {
+        "img": "img/antiques/img60.jpg",
+        "name": "Портрет Степана Лукича Никольского",
+        "work": "illustrations",
+        "plot": "architecture",
+        "style": "primitivism",
+        "technics": "chalk",
+        "year": "1908"
+    },
+    {
+        "img": "img/antiques/img61.jpg",
+        "name": "Купец с купчихой",
+        "work": "painting",
+        "plot": "still-life",
+        "style": "art-nouveau",
+        "technics": "oil",
+        "year": "1895"
+    },
+    {
+        "img": "img/antiques/img62.jpg",
+        "name": "Портрет А. Н. Протасовой",
+        "work": "theatrical",
+        "plot": "allegorical-scene",
+        "style": "impressionism",
+        "technics": "pen",
+        "year": "1899"
+    },
+    {
+        "img": "img/antiques/img63.jpg",
+        "name": "Портрет артистки Т. В. Чижовой",
+        "work": "theatrical",
+        "plot": "still-life",
+        "style": "modern",
+        "technics": "lead pencil",
+        "year": "1902"
+    },
+    {
+        "img": "img/antiques/img64.jpg",
+        "name": "Монахиня",
+        "work": "engraving",
+        "plot": "city-landscape",
+        "style": "primitivism",
+        "technics": "engraving",
+        "year": "1908"
+    },
+    {
+        "img": "img/antiques/img65.jpg",
+        "name": "Булочник. Из серии \"Русские типы\"",
+        "work": "engraving",
+        "plot": "genre-scene",
+        "style": "primitivism",
+        "technics": "oil",
+        "year": "1921"
+    },
+    {
+        "img": "img/antiques/img66.jpg",
+        "name": "Купец с купчихой",
+        "work": "painting",
+        "plot": "still-life",
+        "style": "impressionism",
+        "technics": "chalk",
+        "year": "1918"
+    }
+]

@@ -1,0 +1,22 @@
+.header-picture {
+    margin: 0 auto;
+    width: max-content;
+
+    &__list {
+        display: flex;
+        flex-wrap: nowrap;
+        list-style: none;
+
+        padding: 0;
+    }
+
+    &__item {
+        flex: 0 0 360px;
+        width: 360px;
+        height: 258px;
+        margin-right: 40px;
+        background-color: green;
+        background: url('/img/antiques/img1.jpg') no-repeat;
+        background-size: cover;
+    }
+}

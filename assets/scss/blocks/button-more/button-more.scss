@@ -1,0 +1,24 @@
+.button-more {
+    background-color: transparent;
+    border: none;
+    max-width: 121px;
+    font-family: 'Helvetica', sans-serif;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+
+    &--biography {
+        margin-left: 478px;
+    }
+
+    &--creation {
+        margin-left: 185px;
+        text-decoration: none;
+    }
+
+    &__text {
+        color: #202020;
+        font-size: $font-size-s;
+        font-weight: 700;
+    }
+}

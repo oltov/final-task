@@ -69,8 +69,10 @@ export default {
 
     @include mq(1023) {
         width: 280px;
-        
-        margin-bottom: -20px;
+        padding: 0 0 20px;
+        margin: 0 0 -20px;
+        overflow: hidden;
+        overflow-x: auto;
     }
 
     &__inner {
@@ -95,7 +97,7 @@ export default {
         @include mq(1023) {
             font-size: $font-size-s;
             margin-right: 20px;
-            margin-bottom: 20px;
+             padding: 0;
         }
 
         &--is-active {

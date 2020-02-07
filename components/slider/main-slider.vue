@@ -1,23 +1,28 @@
 <template>
-    <div class="main-slider__inner container">
-        <div class="main-slider__container js-slider-wrapper" ref="container">
+    <div class="main-slider">
+        <nuxt-link to="/catalog" class="main-slider__link" tabindex="1"
+            >все картины</nuxt-link
+        >
+        <div class="main-slider__container" ref="container">
             <ul
-                class="main-slider__list js-slider"
+                class="main-slider__list"
                 :style="{
                     transform: 'translate3d(' + currentPosition + 'px, 0, 0)'
                 }"
             >
                 <li
-                    class="main-slider__item js-slide"
+                    class="main-slider__item"
                     v-for="(item, index) in items"
                     :key="index"
                     ref="slide"
+                    @touchstart="getFirstTouch($event)"
+                    @touchmove="touchHandler($event)"
                 >
                     <p
                         class="main-slider__slide"
                         :style="{ 'background-image': 'url(' + item.img + ')' }"
                     ></p>
-                    <p class="main-slider__slide-name">
+                    <p class="main-slider__slide-name" ref="name">
                         {{ item.name }}
                     </p>
                     <p class="main-slider__slide-index">
@@ -30,11 +35,13 @@
             </ul>
         </div>
         <button
-            class="main-slider__button js-button-left"
+            class="main-slider__button"
+            :class="{ 'main-slider__button--deactive': deactiveButton }"
             aria-label="влево"
             title="влево"
             tabindex="1"
-            @click="goPreviousSlide"
+            @click="moveSliderLeft"
+            v-show="!mobileOn"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -53,11 +60,13 @@
             </svg>
         </button>
         <button
-            class="main-slider__button main-slider__button--right js-button-right"
+            class="main-slider__button main-slider__button--right"
+            :class="{ 'main-slider__button--deactive': deactiveButton }"
             aria-label="влево"
             title="вправо"
             tabindex="1"
-            @click="goNextSlide"
+            @click="moveSliderRight"
+            v-show="!mobileOn"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,12 +93,18 @@ export default {
     data() {
         return {
             currentIndex: 0,
-            isMounted: false
+            isMounted: false,
+            slideMarginRight: 0,
+            mobileOn: false,
+
+            // !!! переделать на абстрактную величину(ширина main слайда)
+            width: 920,
+            firstTouchX: 0
         };
     },
     watch: {
         minElementIndex() {
-            this.$refs.slide[this.currentIndex].style.opacity = 0;
+            this.$refs.slide[this.currentIndex].style.opacity = 0.5;
 
             this.currentIndex = this.minElementIndex;
 
@@ -102,46 +117,219 @@ export default {
             if (!this.isMounted) {
                 return 0;
             } else {
-                return -(this.$refs.container.offsetWidth * this.currentIndex);
+                if (this.mobileOn) {
+                    this.slideMarginRight = 20;
+
+                    // 200 - hard значение, ширина слайдера на mobile,
+                    // !!! переделать на абстрактное значение
+                    this.width = 200;
+                }
+                return -(
+                    this.width * this.currentIndex +
+                    this.slideMarginRight * this.currentIndex
+                );
             }
         },
         numberOfSlides() {
             return this.items.length;
+        },
+        deactiveButton() {
+            return this.currentIndex === 0 ? true : false;
         }
     },
     methods: {
+        getFirstTouch() {
+            this.firstTouchX = (event.touches ||
+                event.originalEvent.touches)[0].clientX;
+            console.log(this.firstTouchX);
+        },
+
+        touchHandler() {
+            if (!this.firstTouchX) return;
+
+            const touchX = (event.touches || event.originalEvent.touches)[0]
+                .clientX;
+            const deltaX = this.firstTouchX - touchX;
+
+            if (deltaX > 40) {
+                this.moveSliderRight();
+                this.firstTouchX = null;
+            }
+
+            if (deltaX < -40) {
+                this.moveSliderLeft();
+                this.firstTouchX = null;
+            }
+        },
+
         passValue() {
             this.$emit("remove", this.currentIndex);
         },
 
-        goPreviousSlide() {
-            this.$refs.slide[this.currentIndex].style.opacity = 0;
+        moveSliderLeft() {
+            if (this.currentIndex - 1 < 0) return;
+
+            this.$refs.slide[this.currentIndex].style.opacity = 0.5;
+            this.$refs.name[this.currentIndex].style.opacity = 0;
 
             this.currentIndex -= 1;
             this.passValue();
 
-            if (this.currentIndex < 0) {
-                this.currentIndex = 0;
-            }
-
             this.$refs.slide[this.currentIndex].style.opacity = 1;
+            this.$refs.name[this.currentIndex].style.opacity = 1;
         },
 
-        goNextSlide() {
-            this.$refs.slide[this.currentIndex].style.opacity = 0;
+        moveSliderRight() {
+            if (this.currentIndex + 1 > this.$refs.slide.length - 1) return;
+
+            this.$refs.slide[this.currentIndex].style.opacity = 0.5;
+            this.$refs.name[this.currentIndex].style.opacity = 0;
 
             this.currentIndex += 1;
             this.passValue();
 
-            if (this.currentIndex > this.$refs.slide.length - 1) {
-                this.currentIndex = this.$refs.slide.length - 1;
-            }
-
             this.$refs.slide[this.currentIndex].style.opacity = 1;
+            this.$refs.name[this.currentIndex].style.opacity = 1;
+        },
+
+        getWindowWidth() {
+            this.mobileOn = window.innerWidth < 1023;
         }
     },
+
     mounted() {
         this.isMounted = true;
+        this.getWindowWidth();
     }
 };
 </script>
+
+<style lang="scss">
+.main-slider {
+    width: 920px;
+    margin: 0 auto;
+    position: relative;
+
+    @include mq(1023) {
+        width: 320px;
+    }
+
+    &__container {
+        overflow: hidden;
+    }
+
+    &__list {
+        display: inline-block;
+        list-style: none;
+        font-size: 0;
+        padding: 0;
+        white-space: nowrap;
+        transition: transform 1s ease-in-out;
+    }
+
+    &__item {
+        display: inline-block;
+        opacity: 0.5;
+        transition: opacity 0.5s ease-in-out;
+
+        &:first-child {
+            opacity: 1;
+        }
+
+        @include mq(1023) {
+            display: inline-flex;
+            flex-direction: column;
+            width: 200px;
+            margin-right: 20px;
+
+            &:first-child {
+                margin-left: 60px;
+            }
+        }
+    }
+
+    &__slide {
+        width: 920px;
+        height: 530px;
+        background-color: green;
+
+        @include mq(1023) {
+            width: 200px;
+            height: 156px;
+            order: 1;
+            margin-top: 20px;
+        }
+    }
+
+    &__slide-name {
+        font-size: $font-size-s;
+        line-height: 1.25;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+
+        @include mq(1023) {
+            white-space: normal;
+            min-height: 35px;
+        }
+    }
+
+    &__slide-index {
+        font-size: $font-size-s;
+        line-height: 0.8;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0;
+
+        @include mq(1023) {
+            order: 1;
+            margin-top: 20px;
+        }
+    }
+
+    &__all-numbers {
+        opacity: 0.5;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 10px;
+        border: none;
+        background-color: transparent;
+        width: 40px;
+        padding: 0;
+        cursor: pointer;
+
+        &--deactive {
+            opacity: 0.5;
+        }
+
+        &--right {
+            right: 0;
+        }
+
+        @include mq(1023) {
+            display: block;
+        }
+    }
+
+    &__link {
+        color: #bfbfbf;
+        text-decoration: none;
+        font-size: $font-size-s;
+        margin-left: 18px;
+        position: absolute;
+        top: -90px;
+        right: 0;
+
+        @include mq(1023) {
+            top: auto;
+            bottom: -75px;
+            left: 100px;
+        }
+    }
+}
+</style>

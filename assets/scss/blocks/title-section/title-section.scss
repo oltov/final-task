@@ -1,0 +1,31 @@
+.title-section {
+    color: #202020;
+    font-size: $font-size-xxxl;
+    font-family: 'YesevaOne', sans-serif;
+    margin: 0;
+
+    &--biography {
+        margin-right: 162px;
+
+        @include mq(1023) {
+            margin-right: 0;
+        }
+    }
+
+    &--creation {
+        display: inline-block;
+        width: max-content;
+        margin: 0;
+        margin-right: 63px;
+
+        @include mq(1023) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &--museum {
+        width: max-content;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+}

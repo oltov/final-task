@@ -45,7 +45,7 @@ export default {
     /*
      ** Nuxt.js modules
      */
-    modules: ["@nuxtjs/style-resources"],
+    modules: ["@nuxtjs/style-resources", "@nuxtjs/axios"],
 
     styleResources: {
         scss: ["@/assets/scss/global.scss"]

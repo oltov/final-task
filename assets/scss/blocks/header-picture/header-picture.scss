@@ -18,5 +18,11 @@
         background-color: green;
         background: url('/img/antiques/img1.jpg') no-repeat;
         background-size: cover;
+
+        @include mq(1023) {
+            flex: 0 0 192px;
+            width: 192px;
+            height: 160px;
+        }
     }
 }

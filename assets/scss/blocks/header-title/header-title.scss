@@ -5,17 +5,31 @@
     justify-content: center;
     color: $color-text-light;
 
-    &--catalog {
-        overflow: hidden;
-    }
+    // &--catalog {
+    //     overflow: hidden;
+    //     width: 920px;
+    //     margin: 0 auto;
+    // }
 
     &__content {
         padding-left: 400px;
 
+        @include mq(1023) {
+            padding: 0 20px;
+        }
+
         &--catalog {
+            width: 920px;
             display: flex;
             flex-direction: row;
+            margin: 0 auto;
             padding-left: 130px;
+
+            @include mq(1023) {
+                width: 320px;
+                flex-direction: column;
+                padding: 0;
+            }
         }
     }
 
@@ -29,6 +43,16 @@
         transform: rotate(-90deg);
         margin: 0;
         padding: 0;
+
+        @include mq(1023) {
+            width: max-content;
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: rotate(0deg);
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
     }
 
     &__name {
@@ -39,10 +63,20 @@
         margin-bottom: 30px;
         padding: 0;
 
+        @include mq(1023) {
+            font-size: 40px;
+        }
+
         &--catalog {
             margin: 0;
             margin-right: 40px;
             line-height: 73px;
+
+            @include mq(1023) {
+                width: max-content;
+                margin-right: 0;
+                padding-left: 20px;
+            }
         }
     }
 
@@ -53,11 +87,20 @@
         margin: 0;
         padding: 0;
 
+        @include mq(1023) {
+            font-size: 16px;
+        }
+
         &--catalog {
             width: 240px;
             padding-top: 10px;
             font-size: $font-size-xxxl;
             line-height: 50px;
+
+            @include mq(1023) {
+                font-size: 30px;
+                padding-left: 20px;
+            }
         }
     }
 }

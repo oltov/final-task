@@ -2,18 +2,28 @@
     background-color: transparent;
     border: none;
     max-width: 121px;
-    font-family: 'Helvetica', sans-serif;
+    font-family: "Helvetica", sans-serif;
     cursor: pointer;
     padding: 0;
     text-align: left;
 
     &--biography {
         margin-left: 478px;
+
+        @include mq(1023) {
+            margin-left: 0;
+        }
     }
 
     &--creation {
         margin-left: 185px;
         text-decoration: none;
+
+        @include mq(1023) {
+            display: inline-block;
+            margin-left: 0;
+            margin-bottom: 40px;
+        }
     }
 
     &__text {

@@ -110,3 +110,116 @@ export default {
     }
 };
 </script>
+
+<style lang="scss">
+.creation {
+    font-size: 0;
+    margin-bottom: 40px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid $color-bg-light;
+    width: 920px;
+
+    @include mq(1023) {
+        width: 280px;
+        padding: 0 20px;
+        padding-top: 60px;
+        }
+
+    &__wrapper {
+        flex-grow: 1;
+        border-bottom: 1px solid $color-bg-light;
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__wrapper-text-img {
+        padding: 0 80px;
+        margin-bottom: 40px;
+
+        @include mq(1023) {
+            padding: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__wrapper-description {
+        margin-bottom: 60px;
+        display: flex;
+
+        @include mq(1023) {
+            display: block;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__paragraph-title {
+        display: inline-block;
+        width: 500px;
+        font-size: $font-size-xl;
+        color: #bfbfbf;
+        line-height: 30px;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        padding-right: 40px;
+
+        @include mq(1023) {
+            width: auto;
+        }
+    }
+
+    &__description {
+        display: inline-block;
+        width: 440px;
+        font-size: $font-size-m;
+        line-height: 26px;
+        vertical-align: top;
+        margin: 0;
+        margin-right: 40px;
+        padding: 0;
+
+        @include mq(1023) {
+            width: auto;
+            margin-bottom: 0;
+            margin-right: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__img-min {
+        display: inline-block;
+        margin-left: 40px;
+        padding: 0;
+
+        @include mq(1023) {
+            width: 280px;
+            margin-left: 20px;
+        }
+    }
+
+    &__img-max {
+        display: inline-block;
+        margin-bottom: 40px;
+        padding: 0;
+
+        @include mq(1023) {
+            width: 280px;
+            height: 204px;
+            margin-left: 20px;
+        }
+    }
+
+    &__social-buttons {
+        display: flex;
+
+        @include mq(1023) {
+            margin-left: 0;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+}
+</style>

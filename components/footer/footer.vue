@@ -23,3 +23,16 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+.footer {
+    background-color: $color-bg-dark;
+    padding: 60px 0 40px 0;
+
+    @include mq(1023) {
+         width: 280px;
+         padding: 0 20px;
+         margin: 0 auto;
+    }
+}
+</style>

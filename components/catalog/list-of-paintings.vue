@@ -20,8 +20,8 @@
             <button
                 type="button"
                 class="picture__pagination-button"
-                :class="{ 'js-pagination-link-color': item.isActive }"
-                v-for="(item, index) in paginationNumbers"
+                :class="{ 'picture__pagination-button--is-active': item.isActive }"
+                v-for="(item, index) in paginationButtons"
                 :key="index"
                 @click.prevent="controlActiveButton(index)"
             >
@@ -41,12 +41,12 @@ export default {
             endOfList: 9,
             startElement: 0,
             stopElement: 9,
-            paginationNumbers: [],
+            paginationButtons: [],
             activeButtonIndex: 0
         };
     },
     methods: {
-        // создание массива для кнопок пагинации
+        // создание массива кнопок пагинации
         getArrayForPagination() {
             // определение целочисленного значения исходя из колличества фотографий
             // и максимального колличества фото на странице
@@ -56,29 +56,27 @@ export default {
 
             // перезапись массива при перестроении сетки с маленькой на большую
             // из-за разного колличества кнопок пагинации
-            this.paginationNumbers = [];
+            this.paginationButtons = [];
 
             for (let i = 1; i <= proportion; i++) {
                 // для первого элемента устанавливается true для активности класса(подсветка)
                 if (i === 1) {
-                    this.paginationNumbers.push({ number: i, isActive: true });
+                    this.paginationButtons.push({ number: i, isActive: true });
                 } else {
-                    this.paginationNumbers.push({ number: i, isActive: false });
+                    this.paginationButtons.push({ number: i, isActive: false });
                 }
             }
         },
 
         // контроль нажатия на пагинацию
         controlActiveButton(index) {
-            // у кнопки которая была активной, меняется состояние на противоположное (true => false)
-            this.paginationNumbers[this.activeButtonIndex].isActive = !this
-                .paginationNumbers[this.activeButtonIndex].isActive;
+            // у кнопки которая была активной перед кликом, меняется состояние на противоположное (true => false)
+            this.paginationButtons[this.activeButtonIndex].isActive = !this
+                .paginationButtons[this.activeButtonIndex].isActive;
 
             // у нажатой кнопки меняется активность на противоположное значение (false => true)
             // и ее индекс заносится в переменную состояния
-            this.paginationNumbers[index].isActive = !this.paginationNumbers[
-                index
-            ].isActive;
+            this.paginationButtons[index].isActive = !this.paginationButtons[index].isActive;
             this.activeButtonIndex = index;
 
             // определение диапазона для отображения
@@ -129,7 +127,8 @@ export default {
     mounted() {
         // начальная генерация массива для пагинации
         this.getArrayForPagination();
-        console.log("моунтед");
     }
 };
 </script>
+
+<style lang="scss"></style>

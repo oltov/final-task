@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <categories />
-    <div class="main__wrapper-filters container">
-      <Filters />
-      <Pictures :dataToList="pictures" />
+    <div>
+        <categories @tabEvent="btnOn"  />
+        <div class="main main--wrapper-filters container">
+            <Filters :dataToFilter="dataToFiltering" :tabPress="tab" @done="setDataToRender" @ready="setDataToTabs" />
+            <Pictures :dataToList="dataToRander"  :elements="dataToTabs" @tabPress="getTabElement"/>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -22,46 +22,97 @@ export default {
     data() {
         return {
             isMounted: false,
-            pictures: [],
+            tabIs: "",
+            dataToFiltering: [],
+            dataToRander: [],
+            rarities: [],
             newPictures: [],
             antiques: [],
             philately: [],
+            dataToTabs: [],
+            tab: "",
             urls: {
-                rarity: "../ajax/rarities.json",
-                new: "../ajax/new-paintings.json",
+                rarities: "../ajax/rarities.json",
+                newPictures: "../ajax/new-painting.json",
                 antiques: "../ajax/antiques.json",
-                philately: "../ajax/philately.json",
+                philately: "../ajax/philately.json"
             }
-        }
+        };
     },
-    // methods: {
-    //     getData(url, arr) {
-    //             fetch(url)
-    //             .then(response => response.json())
-    //             .then(json => this.arr = json)
-    //             .then(i => console.log(this.pictures))
-    //             .catch(error => alert("Ошибка загразки данных"));
-    //         }
-    // },
-    // watch: {
+    methods: {
+        btnOn(index) {
+            if (this[index].length > 0) {
+                this.dataToFiltering = this[index];
+            } else {
+                this.getData(this.urls[index], this[index]);
+            }
+        },
+        getTabElement(i) {
+            this.tab = i;
+        },
 
-        // isMounted() {
-        //     this.$nextTick(function() {
-        //         fetch("../ajax/antiques.json")
-        //         .then(response => response.json())
-        //         .then(json => this.pictures = json)
-        //         .then(i => console.log(this.pictures))
-        //         .catch(error => alert("Ошибка загразки данных"));
+        async getData(url, arr) {
+            const data = await this.$axios.$get(url);
+            data.forEach(el => {
+                arr.push(el);
+            });
+            this.dataToFiltering = data;
+        },
 
-        //     });
+        setDataToRender(data){
+            this.dataToRander = data;
+        },
 
-        // }
-    //  },
+        setDataToTabs(array) {
+            this.dataToTabs = array;
+        }
+
+
+    },
     mounted() {
-        fetch("../ajax/antiques.json")
-            .then(response => response.json())
-            .then(json => (this.pictures = json))
-            .catch(error => alert("Ошибка загразки данных"));
+        this.getData(this.urls.rarities, this.rarities);
+    }
+};
+</script>
+
+<style lang="scss">
+.main {
+
+    &--wrapper-filters {
+        display: flex;
+        padding-top: 40px;
+
+        @include mq(1023) {
+            flex-direction: column;
+        }
+    }
+
+    &__categories {
+
+        @include mq(1023) {
+            overflow-x: scroll;
+            width: 280px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__button-filters {
+        display: none;
+
+        @include mq(1023) {
+            display: block;
+            width: 280px;
+            box-sizing: border-box;
+            border: 1px solid $color-bg-light;
+            background: url('/img/filter-settings.png') no-repeat 250px;
+            margin: 0 auto 20px auto;
+            text-align: left;
+            padding: 5px 10px;
+            font-family: "Helvetica", sans-serif;
+            font-size: $font-size-xs;
+            cursor: pointer;
+        }
     }
 }
-</script>
+</style>

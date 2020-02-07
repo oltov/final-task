@@ -1,4 +1,9 @@
 .ya-share2 {
+
+    @include mq(1023) {
+        padding-bottom: 40px;
+    }
+
     &__list {
         display: inline-block;
         vertical-align: top;
@@ -11,6 +16,14 @@
         display: inline-block;
         vertical-align: top;
         margin: 5px 4px 5px 0;
+
+        @include mq(1023) {
+            margin: 5px 10px 5px 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
 
         &_service_vkontakte .ya-share2__icon {
             background: url('/img/vk.svg') no-repeat center;
@@ -42,6 +55,11 @@
         color: #ffffff;
         overflow: hidden;
         position: relative;
+
+        @include mq(1023) {
+            height: 34px;
+            width: 84px;
+        }
     }
 
     &__icon {
@@ -49,6 +67,10 @@
         height: 24px;
         width: 24px;
         margin: 5px 35px;
+
+        @include mq(1023) {
+            margin: 4px 30px;
+        }
     }
 
     &__counter {
@@ -59,6 +81,14 @@
 
     &__title {
         display: none;
+    }
+}
+
+.bio .ya-share2 {
+    @include mq(1023) {
+        position: absolute;
+        left: 0;
+        bottom: 0;
     }
 }
 

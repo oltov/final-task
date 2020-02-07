@@ -2,10 +2,6 @@
     background-color: $color-bg-dark;
     margin-bottom: 40px;
 
-    // &__inner {
-
-    // }
-
     &__container {
         display: inline-block;
         vertical-align: middle;
@@ -21,7 +17,6 @@
         padding: 0;
         white-space: nowrap;
         transition: transform 1s ease-in-out;
-
     }
 
     &__item {
@@ -40,8 +35,4 @@
             opacity: 1;
         }
     }
-
-    // &__button {
-
-    // }
 }

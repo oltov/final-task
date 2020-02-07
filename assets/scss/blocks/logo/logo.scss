@@ -3,6 +3,10 @@
     top: 87vh;
     right: 7vw;
 
+    @include mq(1023) {
+        display: none;
+    }
+
     &__link {
         display: block;
     }

@@ -1,7 +1,7 @@
 <template>
   <div
         class="header-title__content"
-        v-bind:class="{ 'header-title__content--catalog': data.isActive, container: data.isActive }"
+        v-bind:class="{ 'header-title__content--catalog': data.isActive }"
     >
         <p class="header-title__date" if='data.date'>
             <span>{{ data.date }}</span>

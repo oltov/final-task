@@ -1,18 +1,13 @@
 <template>
-    <section class="main-slider">
+    <section class="slider">
         <h2 class="visually-hidden">слайдер</h2>
-        <div class="secondary-slider container js-root">
-            <PreviewSlider
-                :slides="arr"
-                :curindex="ind"
-                @click-item="setIndexItem"
-            />
-            <nuxt-link to="/catalog" class="main-slider__link" tabindex="1"
-                >все картины</nuxt-link
-            >
-        </div>
+        <PreviewSlider
+            :slides="imageData"
+            :curindex="indexMainSlide"
+            @click-item="setIndexItem"
+        />
         <MainSlider
-            :items="arr"
+            :items="imageData"
             :min-element-index="mainSlide"
             @remove="setCurrentIndex"
         />
@@ -30,14 +25,14 @@ export default {
     },
     data() {
         return {
-            arr: [],
-            ind: 0,
+            imageData: [],
+            indexMainSlide: 0,
             mainSlide: 0
         };
     },
     methods: {
         setCurrentIndex(current) {
-            this.ind = current;
+            this.indexMainSlide = current;
         },
         setIndexItem(index) {
             this.mainSlide = index;
@@ -48,8 +43,24 @@ export default {
         this.isMounted = true;
         fetch("../ajax/antiques.json")
             .then(response => response.json())
-            .then(json => (this.arr = json))
+            .then(json => (this.imageData = json))
             .catch(error => alert("Ошибка загразки данных"));
     }
 };
 </script>
+
+<style lang="scss">
+.slider {
+    background-color: $color-bg-dark;
+    margin-bottom: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #f5f5f5;
+
+    @include mq(1023) {
+        width: 320px;
+        margin: 0 auto;
+        padding-bottom: 100px;
+    }
+}
+</style>

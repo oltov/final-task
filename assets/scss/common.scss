@@ -9,7 +9,18 @@ body {
     width: 920px;
     margin: 0 auto;
     position: relative;
+
+    @include mq(1023) {
+        width: 320px;
+        // padding: 0 20px;
+    }
 }
+
+// .container-mobail {
+//     width: 280px;
+//     margin: 0 auto;
+// }
+
 
 .visually-hidden {
     position: absolute;

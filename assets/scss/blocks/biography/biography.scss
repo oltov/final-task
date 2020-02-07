@@ -9,6 +9,14 @@
         width: 520px;
         padding-top: 5px;
         padding-bottom: 64px;
+
+        @include mq(1023) {
+            width: auto;
+
+            &:last-child {
+                padding-bottom: 10px;
+            }
+        }
     }
 
     &__text {
@@ -27,6 +35,11 @@
         line-height: 2.5;
         letter-spacing: 0.05em;
         color: #bfbfbf;
+
+        @include mq(1023) {
+            top: -50px;
+            left: 0;
+        }
     }
 }
 
